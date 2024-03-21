@@ -18,57 +18,77 @@ for (const puntosRkg of puntosRanking) {
   matrizRanking[indRkg][2] = puntosRkg.sierra;
   matrizRanking[indRkg][3] = puntosRkg.acantilados;
   matrizRanking[indRkg][4] = puntosRkg.tulsa;
-  matrizRanking[indRkg][1] = puntosRkg.sierra + puntosRkg.acantilados + puntosRkg.tulsa;
+  matrizRanking[indRkg][1] =
+    puntosRkg.sierra + puntosRkg.acantilados + puntosRkg.tulsa;  
+  indRkg++;
 }
 
-  // ordena la matriz por segunda columna
 
-  matrizRanking.sort((a, b) => a[1] - b[1]);
+// Toma datos de los netos de Apertura
+// los ordena por netos crecientes, para tomar los 4 primeros
+//ordena por fec para presentarlo por fecha
+for (const play in playersData) {
+  playersData[play].sort((a, b) => a.neto - b.neto);
+  playersData[play] = playersData[play].slice(0, 4);
+  playersData[play].sort((a, b) => a.fec - b.fec);
+}
 
-  //  presenta resultados
-  //  ubica la matriz
-  let lineaRanking = document.getElementById("lineaRanking")
+// agrega a la matriz estos 4 valores
 
-  // Agrega el nombre del jugador como la primera celda
-  for (indRkg = 0; indRkg < 12; indRkg++) {
-    lineaRanking = tablaRanking.insertRow();
-    const nombreCeldaRkg = lineaRanking.insertCell();
-    nombreCeldaRkg.textContent = matrizRanking[indRkg][0];
-
-    const totPuntos = lineaRanking.insertCell();
-    totPuntos.textContent = matrizRanking[indRkg][1];
-
-    const sierra = lineaRanking.insertCell();
-    sierra.textContent = matrizRanking[indRkg][2];
-
-    const acantilados = lineaRanking.insertCell();
-    acantilados.textContent = matrizRanking[indRkg][3];
-
-    const tulsa = lineaRanking.insertCell();
-    tulsa.textContent = matrizRanking[indRkg][4];
+for (play in playersData) {
+  let filaBuscada = matrizRanking.findIndex((fila) => fila[0] === play);
+  if(filaBuscada === -1){
+    console.log ("valor no encontrado: " , play)
   }
+    else{
+    matrizRanking[filaBuscada][5] = playersData[play][0].neto;
+    matrizRanking[filaBuscada][6] = playersData[play][1].neto;
+    matrizRanking[filaBuscada][7] = playersData[play][2].neto;
+    if (playersData[play].length > 3){
+        matrizRanking[filaBuscada][8] = playersData[play][3].neto}
+      else{
+        matrizRanking[filaBuscada][8] = 150}  
+    for (let jota=5; jota<9; jota++){
+      matrizRanking[filaBuscada][1] += matrizRanking[filaBuscada][jota];
+    }
+  }
+}
+// ordena la matriz por segunda columna
 
-  // for (const play in playersData) {
-  //   playersData[play].sort((a, b) => a.neto - b.neto);
-  // }
+matrizRanking.sort((a, b) => a[1] - b[1]);
 
-  // let limiteElementos4 = 4;
+//  presenta resultados
+//  ubica la matriz
 
-  // //El método slice devuelve una copia de una porción del arreglo. 
-  // for (play in playersData) {
-  //   playersData[play] = playersData[play].slice(0, limiteElementos4);
-  // }
+ let lineaRanking = document.getElementById("lineaRanking");
 
-  //ordena por fec para presentarlo por fecha
+// Agrega el nombre del jugador como la primera celda
+for (indRkg = 0; indRkg < 12; indRkg++) {
+  lineaRanking = tablaRanking.insertRow();
+  const nombreCeldaRkg = lineaRanking.insertCell();
+  nombreCeldaRkg.textContent = matrizRanking[indRkg][0];
 
-  // for (play in playersData) {
-  //   playersData[play].sort((a, b) => a.fec - b.fec);
-  //   console.log(playersData[play])
-  // }
-  // // agrega a la matriz estos 4 valores
-  // let filaBuscada = matrizRanking.find(fila => fila[0] === playersData[play]);
+  const totPuntos = lineaRanking.insertCell();
+  totPuntos.textContent = matrizRanking[indRkg][1];
 
-  // if (filaBuscada) {
-  //   console.log("Fila encontrada:", filaBuscada);
-  // } else {
-  //   console.log("Fila no encontrada");}
+  const sierra = lineaRanking.insertCell();
+  sierra.textContent = matrizRanking[indRkg][2];
+
+  const acantilados = lineaRanking.insertCell();
+  acantilados.textContent = matrizRanking[indRkg][3];
+
+  const tulsa = lineaRanking.insertCell();
+  tulsa.textContent = matrizRanking[indRkg][4];
+
+  const unoAper = lineaRanking.insertCell();
+  unoAper.textContent = matrizRanking[indRkg][5];
+
+  const dosAper = lineaRanking.insertCell();
+  dosAper.textContent = matrizRanking[indRkg][6];
+
+  const tresAper = lineaRanking.insertCell();
+  tresAper.textContent = matrizRanking[indRkg][7];
+
+  const cuatroAper = lineaRanking.insertCell();
+  cuatroAper.textContent = matrizRanking[indRkg][8];
+}
