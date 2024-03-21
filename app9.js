@@ -119,9 +119,6 @@ i=0;
 j=0;
 
 for (const play in playersData) {
-   //console.log(play);
-   //console.log(playersData[play].sumaNetos)
-   //console.log (playersData[play].promedios);
    matriz2[i][0] = play;
    matriz2[i][1] = (playersData[play].sumaNetos);
    matriz2[i][2] = (playersData[play].promedios);
@@ -132,8 +129,6 @@ i=0;
 let col=0;
 for (const elemento in playersData) {
      for (j=0; j<playersData[elemento].length; j++){
-    //console.log (playersData[elemento][j]);
-    //console.log (playersData[elemento][j].neto);
     col=(playersData[elemento][j].fec) + 2
     matriz2 [i][col] = (playersData[elemento][j].neto);
     }
