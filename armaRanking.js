@@ -10,37 +10,27 @@ let matrizRanking = [];
 let indRkg = 0;
 
 // llena los valors de la gira
-for (const puntosRkg of puntosRanking){
-    if (!matrizRanking[indRkg]) {
-        matrizRanking[indRkg] = [];}
-    matrizRanking[indRkg] [0] = puntosRkg.playRkg;
-    matrizRanking[indRkg] [2] = puntosRkg.sierra;
-    matrizRanking[indRkg] [3] = puntosRkg.acantilados;
-    matrizRanking[indRkg] [4] = puntosRkg.tulsa;
-    matrizRanking[indRkg] [1] = puntosRkg.sierra + puntosRkg.acantilados + puntosRkg.tulsa;
-
-    console.log(matrizRanking[indRkg] [0])
-    console.log(matrizRanking[indRkg] [1])
-    console.log(matrizRanking[indRkg] [2])
-    console.log(matrizRanking[indRkg] [3])
-    console.log(matrizRanking[indRkg] [4])
-
-    console.log (indRkg++);
-    // matrizRanking[[indRkg] [0]] = puntosRkg.playRkg;
+for (const puntosRkg of puntosRanking) {
+  if (!matrizRanking[indRkg]) {
+    matrizRanking[indRkg] = [];
+  }
+  matrizRanking[indRkg][0] = puntosRkg.playRkg;
+  matrizRanking[indRkg][2] = puntosRkg.sierra;
+  matrizRanking[indRkg][3] = puntosRkg.acantilados;
+  matrizRanking[indRkg][4] = puntosRkg.tulsa;
+  matrizRanking[indRkg][1] = puntosRkg.sierra + puntosRkg.acantilados + puntosRkg.tulsa;
 }
-// console.log(matrizRanking[indRkg]);
-// console.log(matrizRanking)
-// ordena la matriz por segunda columna
 
+  // ordena la matriz por segunda columna
 
- matrizRanking.sort((a, b) => a[1] - b[1]);
+  matrizRanking.sort((a, b) => a[1] - b[1]);
 
-//  presenta resultados
-//  ubica la matriz
-let lineaRanking = document.getElementById("lineaRanking")
+  //  presenta resultados
+  //  ubica la matriz
+  let lineaRanking = document.getElementById("lineaRanking")
 
-// Agrega el nombre del jugador como la primera celda
-for (indRkg=0; indRkg<12; indRkg++){
+  // Agrega el nombre del jugador como la primera celda
+  for (indRkg = 0; indRkg < 12; indRkg++) {
     lineaRanking = tablaRanking.insertRow();
     const nombreCeldaRkg = lineaRanking.insertCell();
     nombreCeldaRkg.textContent = matrizRanking[indRkg][0];
@@ -56,23 +46,29 @@ for (indRkg=0; indRkg<12; indRkg++){
 
     const tulsa = lineaRanking.insertCell();
     tulsa.textContent = matrizRanking[indRkg][4];
+  }
 
-}
+  // for (const play in playersData) {
+  //   playersData[play].sort((a, b) => a.neto - b.neto);
+  // }
 
-for (const play in playersData) {
-    playersData[play].sort((a, b) => a.neto - b.neto);
-}
+  // let limiteElementos4 = 4;
 
-let limiteElementos4 = 4;
+  // //El método slice devuelve una copia de una porción del arreglo. 
+  // for (play in playersData) {
+  //   playersData[play] = playersData[play].slice(0, limiteElementos4);
+  // }
 
-//El método slice devuelve una copia de una porción del arreglo. 
-for (play in playersData) {
-playersData[play] = playersData[play].slice(0, limiteElementos4);}
+  //ordena por fec para presentarlo por fecha
 
-//ordena por fec para presentarlo por fecha
+  // for (play in playersData) {
+  //   playersData[play].sort((a, b) => a.fec - b.fec);
+  //   console.log(playersData[play])
+  // }
+  // // agrega a la matriz estos 4 valores
+  // let filaBuscada = matrizRanking.find(fila => fila[0] === playersData[play]);
 
-for (play in playersData) {
-    playersData[play].sort((a, b) => a.fec - b.fec);
-    console.log(playersData[play])
-}
-
+  // if (filaBuscada) {
+  //   console.log("Fila encontrada:", filaBuscada);
+  // } else {
+  //   console.log("Fila no encontrada");}
