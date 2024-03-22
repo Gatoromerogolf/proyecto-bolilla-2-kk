@@ -5,11 +5,31 @@
 //  ordenar la matriz por la suma de valores
 //  presentar y dar las urras!!!!
 
-// crea la matriz para llenar
+
+// Paso 1: Agrupar los datos por jugador, manteniendo solo pares de fec y neto
+const playersData = {};
 let matrizRanking = [];
 let indRkg = 0;
 
-// llena los valors de la gira
+players2.forEach(({ play, fec, neto }) => {
+  if (neto > 0) {
+    // Filtra los pares donde neto es mayor a 0
+    if (!playersData[play]) {
+      playersData[play] = []; //inicializa el arreglo para el jugador play asignándole un nuevo arreglo vacío.
+    }
+    playersData[play].push({ fec, neto }); // Agrega un nuevo objeto al arreglo del jugador play. El objeto tiene dos propiedades: fec y neto. 
+  }
+});
+
+//
+for (play in playersData) {
+  playersData[play].sort((a, b) => a.neto - b.neto);
+  playersData[play] = playersData[play].slice(0, 4);
+  playersData[play].sort((a, b) => a.fec - b.fec);
+}
+
+
+// llena los valores de la gira
 for (const puntosRkg of puntosRanking) {
   if (!matrizRanking[indRkg]) {
     matrizRanking[indRkg] = [];
@@ -23,15 +43,6 @@ for (const puntosRkg of puntosRanking) {
   indRkg++;
 }
 
-
-// Toma datos de los netos de Apertura
-// los ordena por netos crecientes, para tomar los 4 primeros
-//ordena por fec para presentarlo por fecha
-for (const play in playersData) {
-  playersData[play].sort((a, b) => a.neto - b.neto);
-  playersData[play] = playersData[play].slice(0, 4);
-  playersData[play].sort((a, b) => a.fec - b.fec);
-}
 
 // agrega a la matriz estos 4 valores
 
@@ -95,7 +106,7 @@ for (indRkg = 0; indRkg < 12; indRkg++) {
 
 let lineaRankingVs = document.getElementById("lineaRankingVs");
 
-for (indice = 0; indice < 6; indRkg++) {
+for (indice = 0; indice < 6; indice++) {
   lineaRankingVs = tablaRankingVs.insertRow();
 
   let nombreCeldaRkg = lineaRankingVs.insertCell();
