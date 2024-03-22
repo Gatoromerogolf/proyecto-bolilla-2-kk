@@ -93,17 +93,17 @@ for (indRkg = 0; indRkg < 12; indRkg++) {
   cuatroAper.textContent = matrizRanking[indRkg][8];
 }
 
-// let lineaRankingVs = document.getElementById("lineaRankingVs");
+let lineaRankingVs = document.getElementById("lineaRankingVs");
 
-// for (indice = 0; indice < 6; indRkg++) {
-//   lineaRankingVs = tablaRankingVs.insertRow();
+for (indice = 0; indice < 6; indRkg++) {
+  lineaRankingVs = tablaRankingVs.insertRow();
 
-//   let nombreCeldaRkg = lineaRanking.insertCell();
-//   nombreCeldaRkg.textContent = matrizRanking[indice][0];
+  let nombreCeldaRkg = lineaRankingVs.insertCell();
+  nombreCeldaRkg.textContent = matrizRanking[indice][0];
 
-//   nombreCeldaRkg = lineaRanking.insertCell();
-//   nombreCeldaRkg.textContent = "vs";
+  nombreCeldaRkg = lineaRankingVs.insertCell();
+  nombreCeldaRkg.textContent = "vs";
 
-//   nombreCeldaRkg = lineaRanking.insertCell();
-//   nombreCeldaRkg.textContent = matrizRanking[11-indice][0];
-// }
+  nombreCeldaRkg = lineaRankingVs.insertCell();
+  nombreCeldaRkg.textContent = matrizRanking[11-indice][0];
+}
