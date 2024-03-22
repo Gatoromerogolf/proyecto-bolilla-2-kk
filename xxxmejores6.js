@@ -1,3 +1,4 @@
+
 // Crear una matriz de 12 filas por 22 columnas inicializada en cero
 const filasMat = 12;
 const columnas = 20;
@@ -19,22 +20,12 @@ players2.forEach(({ play, fec, neto }) => {
     playersData[play].push({ fec, neto }); // Esto agrega un nuevo objeto al arreglo del jugador play. El objeto tiene dos propiedades: fec y neto. 
   }
 });
-
-//
+// ordena por score neto de menor a mayor
+//El método slice devuelve una copia de una porción del arreglo.  Toma los seis primeros
+//ordena por fec para presentarlo por fecha
 for (const play in playersData) {
   playersData[play].sort((a, b) => a.neto - b.neto);
-}
-
-const limiteElementos = 6;
-
-//El método slice devuelve una copia de una porción del arreglo.
-for (play in playersData) {
-  playersData[play] = playersData[play].slice(0, limiteElementos);
-}
-
-//ordena por fec para presentarlo por fecha
-
-for (play in playersData) {
+  playersData[play] = playersData[play].slice(0, 6);
   playersData[play].sort((a, b) => a.fec - b.fec);
 }
 
@@ -89,13 +80,9 @@ for (const nombreGrupo in playersData) {
         neto.textContent = playersData[nombreGrupo][indice].neto;
       }
     }
-
     // hay que buscar en que fechas tiene netos... 1, 2, 3 etc.
     // se asocia que 1 es la primera fecha (3 febrero, 2 10 febrero etc.)
-    // -- Se tendría que automatizar para que los datos de cabecera se llenen segun lo que se lea en datos5--
-
     // Como se quiere llenar toda la matriz, el valor buscado es j que indicaria primera, segunda, tercera etc. fecha.... Se busca entonces si player tiene score en la fecha j
-
     // ubica la posición en que se encuentra el valor buscado
     function posicionValor(objetos, valorBuscado) {
       return objetos.findIndex((objeto) => objeto.fec === valorBuscado);
@@ -107,8 +94,6 @@ for (const nombreGrupo in playersData) {
     }
   }
 }
-
-//console.log (playersData)
 
 i = 0;
 j = 0;
@@ -137,13 +122,10 @@ let lineaDatos2 = document.getElementById("lineaScore2");
 // Agrega el nombre del grupo como la primera celda
 for (i = 0; i < 12; i++) {
   const lineaDatos2 = tablaSeis2.insertRow();
-
   for (j = 0; j < 20; j++) {
-    //console.log (typeof (matriz2[i][j]))
     if (matriz2[i][j] === 0) {
       matriz2[i][j] = "--";
     }
-    //console.log (matriz2 [i][j]);
     const celdagral = lineaDatos2.insertCell(-1);
     celdagral.textContent = matriz2[i][j];
     if (matriz2[i][j] === "--") {
