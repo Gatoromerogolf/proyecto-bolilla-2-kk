@@ -140,6 +140,13 @@ ul {
     background-color: #464545;
 }
 
+.otraLista {
+    list-style-type:circle;
+    margin: 10;
+    padding: 10;
+    overflow: hidden;
+}
+
 
 li.barra {
     float: left;
