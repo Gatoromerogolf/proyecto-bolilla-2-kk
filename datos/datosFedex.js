@@ -25,7 +25,7 @@ const puntosFedex = [
     {playFd: 'Negro', puntosFd:2, posFd:3, fechaFd:8},
     {playFd: 'Presi', puntosFd:6, posFd:1, fechaFd:9},
     {playFd: 'Gaby', puntosFd:4, posFd:2, fechaFd:9},
-    {playFd: 'Negro', puntosFd:2, posFd:1, fechaFd:9},
+    {playFd: 'Negro', puntosFd:2, posFd:3, fechaFd:9},
     {playFd: 'Presi', puntosFd:4, posFd:2, fechaFd:10},
     {playFd: 'Joaco', puntosFd:6, posFd:1, fechaFd:10},
     {playFd: 'Diegui', puntosFd:2, posFd:3, fechaFd:10},
