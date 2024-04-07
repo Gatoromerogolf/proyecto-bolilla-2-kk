@@ -522,7 +522,7 @@ p.scores{
     background-color: #fefefe;
     margin: 15% auto; /* 15% desde la parte superior y centrado */
     padding: 20px;
-    border: 1px solid #888;
+    border: 10px solid #f5a2a2;
     width: 80%; /* Podrías querer un ancho menor */
   }
   
