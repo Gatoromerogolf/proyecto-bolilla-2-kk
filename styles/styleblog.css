@@ -504,7 +504,7 @@ p.scores{
 
 /*  VENTANA AUTOMATICA AL INICIO
 /* Estilo del modal (background) */
-.modal {
+.modal-1 {
     display: none; /* Oculto por defecto */
     position: fixed; /* Fijo en toda la pantalla */
     z-index: 1; /* Situado sobre otros contenidos */
@@ -518,12 +518,12 @@ p.scores{
   }
   
   /* Estilo del contenido del modal */
-  .modal-contenido {
-    background-color: #fefefe;
+  .modal-contenido-1 {
+    background-color: #ebede3;
     margin: 15% auto; /* 15% desde la parte superior y centrado */
-    padding: 20px;
-    border: 10px solid #f5a2a2;
-    width: 80%; /* Podrías querer un ancho menor */
+    padding: 15px;
+    border: 5px solid #101010;
+    width: 79%; /* Podrías querer un ancho menor */
   }
   
   /* El botón cerrar */
