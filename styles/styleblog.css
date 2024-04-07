@@ -501,3 +501,43 @@ p.scores{
     font-weight: bold; /* Hacer los números más gruesos */
     color: black;
   }
+
+/*  VENTANA AUTOMATICA AL INICIO
+/* Estilo del modal (background) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en toda la pantalla */
+    z-index: 1; /* Situado sobre otros contenidos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgb(0,0,0); /* Fondo negro */
+    background-color: rgba(0,0,0,0.4); /* Negro con opacidad */
+  }
+  
+  /* Estilo del contenido del modal */
+  .modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Podrías querer un ancho menor */
+  }
+  
+  /* El botón cerrar */
+  .cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .cerrar:hover,
+  .cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
