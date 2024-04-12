@@ -523,7 +523,7 @@ p.scores{
     margin: 15% auto; /* 15% desde la parte superior y centrado */
     padding: 15px;
     border: 5px solid #101010;
-    width: 79%; /* Podrías querer un ancho menor */
+    width: 60%; /* Podrías querer un ancho menor */
   }
   
   /* El botón cerrar */
