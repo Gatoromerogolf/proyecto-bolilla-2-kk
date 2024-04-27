@@ -142,5 +142,17 @@ const players2 = [
     {fec:12, play: 'Panza', neto:0, pos:0, pg:0, or:0},
     {fec:12, play: 'Presi', neto:0, pos:0, pg:0, or:0},
     {fec:12, play: 'Sensei', neto:0, pos:0, pg:0, or:0},
-    {fec:12, play: 'Torni', neto:73, pos:1, pg:5, or:0}
+    {fec:12, play: 'Torni', neto:73, pos:1, pg:5, or:0},
+    {fec:13, play: 'Edu', neto:0, pos:0, pg:0, or:0},
+    {fec:13, play: 'Fer', neto:0, pos:0, pg:0, or:0},
+    {fec:13, play: 'Gaby', neto:82, pos:0, pg:0, or:0},
+    {fec:13, play: 'Joaco', neto:76, pos:0, pg:0, or:1},
+    {fec:13, play: 'Juancho', neto:78, pos:0, pg:0, or:0},
+    {fec:13, play: 'Julito', neto:0, pos:0, pg:0, or:0},
+    {fec:13, play: 'Diegui', neto:76, pos:3, pg:1, or:0},    
+    {fec:13, play: 'Negro', neto:71, pos:1, pg:6, or:0},
+    {fec:13, play: 'Panza', neto:80, pos:0, pg:0, or:0},
+    {fec:13, play: 'Presi', neto:0, pos:0, pg:0, or:0},
+    {fec:13, play: 'Sensei', neto:81, pos:0, pg:0, or:0},
+    {fec:13, play: 'Torni', neto:74, pos:2, pg:2, or:0}
 ]
