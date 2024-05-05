@@ -38,10 +38,12 @@ for (player of puntosRanking)
 
 // ordenar la matriz para sacar el mayor valor
 
-matrizPelotas.sort ((a, b) => b - a);
+matrizPelotas.sort ((a, b) => b[1] - a[1]);
 
 ctddPelotas.textContent = matrizPelotas[0][1];
 nombrePelotas.textContent = matrizPelotas[0][0];
+
+console.log (matrizPelotas)
 
 let valor = matrizPelotas[0][0]; 
 
@@ -71,3 +73,58 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.getElementById('imagenDinamica').src = imgSrc;
 });
+
+// boton.addEventListener("click", (event) => {
+//   const info = event.target.getAttribute("data-info");
+//   armarDetalleGeneral(info);
+//   const modal = document.getElementById("modalGeneral");
+//   if (modal) {
+//     modal.style.display = "block";
+//   }
+// });
+
+
+
+/* ---------- MUESTRA DETALLE PELOTAS GANADAS ------*/
+
+
+function muestraPelotasGanadas(){
+  var modal = document.getElementById("modalPelotasGanadas");
+  var tabla = document.getElementById("tablaModalGeneralPelotas");
+
+  // Eliminar todas las filas, excepto la cabecera
+  var rowCount = tabla.rows.length;
+  for (var i = rowCount - 1; i > 0; i--) {
+      tabla.deleteRow(i);
+    }
+  llenaModalAMostrar();
+  modal.style.display = "block";
+}
+
+document.getElementById("detallePelotas").addEventListener("click", muestraPelotasGanadas);
+
+
+
+/* ------   CIERRA VENTANA ----*/
+function cerrarModalPelotas(){
+  var modal = document.getElementById("modalPelotasGanadas");
+  modal.style.display = "none";
+}
+
+// Evento para el botón de cierre del modal
+document.getElementById("cerrarPelotas").addEventListener("click", cerrarModalPelotas);
+
+
+/* -----   LLENA DATOS DE PELOTAS GANADAS -----*/
+
+function llenaModalAMostrar(){
+  // agrega las filas
+  for (i=0; i<matrizPelotas.length; i++){
+    const lineaPelotas = tablaModalGeneralPelotas.insertRow();
+    const nombreJugador = lineaPelotas.insertCell();
+    nombreJugador.textContent = matrizPelotas[i][0];
+    const pelotasJugador = lineaPelotas.insertCell();
+    pelotasJugador.textContent = matrizPelotas[i][1];
+  }  
+}
+

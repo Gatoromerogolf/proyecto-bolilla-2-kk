@@ -250,6 +250,7 @@ botones.forEach((boton) => {
 // }
 
 
+
 function armarDetalleGeneral(info) {
   let lineaModalGeneral = document.getElementById("lineaModalGeneral");
   eliminarFilas();
@@ -286,9 +287,6 @@ function armarDetalleGeneral(info) {
   }
 }
 // }
-
-
-
 
 
 function eliminarFilas() {

@@ -566,3 +566,25 @@ p.scores {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*  -------   muestra pelotas ganadas ----*/
+
+.modal-Pelotas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros contenidos */
+}
+
+.modal-contenido-Pelotas {
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
