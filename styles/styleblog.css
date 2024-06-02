@@ -461,6 +461,7 @@ a.submenu:active {
   border-radius: 10%;
 }
 
+/*
 .scores {
   width: 80%;
   border-collapse: collapse;
@@ -475,14 +476,39 @@ a.submenu:active {
 td.scores,
 th.scores {
   border-collapse: collapse;
-  /*border: 0px dotted;*/
-  padding: 18px 15px;
+  border: 0px dotted;
+  padding: 3px 10px;
   text-align: center;
+  margin: left;
 }
 
 p.scores {
   text-align: center;
 }
+
+*/
+
+.scores-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.scores-table {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.scores {
+  text-align: center;
+}
+
+.scores img {
+  display: block;
+  margin: 0 auto;
+}
+
 
 
 
