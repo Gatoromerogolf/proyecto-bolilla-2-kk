@@ -157,7 +157,7 @@ li.barra a {
   display: block;
   color: white;
   text-align: center;
-  padding: 5px 5px;
+  padding: 2px 2px;
   text-decoration: none;
 }
 
@@ -165,9 +165,15 @@ li.barra a:hover:not(.active) {
   background-color: #f80202;
 }
 
-li.barra a:hover:(.active) {
+/* li.barra a:hover:(.active) {
+  background-color: #04AA6D;
+} */
+
+li.barra a:hover,
+li.barra a.active {
   background-color: #04AA6D;
 }
+
 
 ul.desorder {
   list-style-type: square;
