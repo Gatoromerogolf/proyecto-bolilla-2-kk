@@ -426,12 +426,43 @@ a {
   margin: 3px;
   padding: 5px 10px;
   line-height: 30px;
-  background: rgb(195, 105, 95);
+  /*background: rgb(9, 148, 202);*/
+  background: #6e6a69;
   display: inline-block;
   box-shadow: 2px 5px 0px #000;
   border-radius: 10%;
 }
 
+.submenuFin {
+  width: 75px;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  margin: 3px;
+  padding: 5px 10px;
+  line-height: 30px;
+  background: #FFA500;
+  display: inline-block;
+  box-shadow: 2px 5px 0px #000;
+  border-radius: 10%;
+}
+
+
+.submenuVer {
+  width: 75px;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  margin: 3px;
+  padding: 5px 10px;
+  line-height: 30px;
+  background: #bd6cbd;
+  display: inline-block;
+  box-shadow: 2px 5px 0px #000;
+  border-radius: 10%;
+}
 a.submenu:link {
   color: whitesmoke;
 }
