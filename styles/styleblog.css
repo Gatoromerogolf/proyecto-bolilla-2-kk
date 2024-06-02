@@ -421,13 +421,14 @@ a {
   width: 75px;
   text-align: center;
   font-size: 12px;
-  color: rgb(253, 252, 252);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   margin: 3px;
   padding: 5px 10px;
   line-height: 30px;
   /*background: rgb(9, 148, 202);*/
-  background: #6e6a69;
+  /*background: #6e6a69;*/
+  background: #943daa;
   display: inline-block;
   box-shadow: 2px 5px 0px #000;
   border-radius: 10%;
@@ -437,12 +438,13 @@ a {
   width: 75px;
   text-align: center;
   font-size: 12px;
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 3px;
   padding: 5px 10px;
   line-height: 30px;
-  background: #FFA500;
+  /*background: #FFA500;*/
+  background: #6e6a69;
   display: inline-block;
   box-shadow: 2px 5px 0px #000;
   border-radius: 10%;
