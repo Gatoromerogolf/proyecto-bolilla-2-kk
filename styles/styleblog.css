@@ -426,9 +426,10 @@ a {
   margin: 3px;
   padding: 5px 10px;
   line-height: 30px;
-  /*background: rgb(9, 148, 202);*/
+  /*background: rgb(9, 148, 202); */
   /*background: #6e6a69;*/
-  background: #943daa;
+  /*background: #ec601f;*/
+  background: #976c1c;
   display: inline-block;
   box-shadow: 2px 5px 0px #000;
   border-radius: 10%;
