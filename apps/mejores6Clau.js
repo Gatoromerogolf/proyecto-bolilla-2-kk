@@ -1,7 +1,7 @@
 
 // Crear una matriz de 12 filas por 22 columnas inicializada en cero
 const filasMat = 12;
-const columnas = 22;
+const columnas = 25;
 const matriz2 = new Array(filasMat)
   .fill(0)
   .map(() => new Array(columnas).fill(0));
@@ -12,14 +12,14 @@ const playersData = {};
 //if (!playersData[play]): verifica si no existe ningún dato para el jugador con índice play en el arreglo playersData. El ! antes de playersData[play] verifica si es falso, es decir, si es nulo, undefined, 0, false o una cadena vacía.
 //Si la condición del if se cumple (es decir, no hay datos para el jugador), se ejecuta el bloque de código dentro del if.
 players2.forEach(({ play, fec, neto }) => {
-  if (fec < 17){
-  if (neto > 0) {
-    // Filtra los pares donde neto es mayor a 0
-    if (!playersData[play]) {
-      playersData[play] = []; //Aquí, se está inicializando el arreglo para el jugador play asignándole un nuevo arreglo vacío.
+    if (fec > 16) {
+        fec -=16;
+        // Filtra los pares donde neto es mayor a 0
+        if (!playersData[play]) {
+          playersData[play] = []; //Aquí, se está inicializando el arreglo para el jugador play asignándole un nuevo arreglo vacío.
+        }
+        playersData[play].push({ fec, neto }); // Esto agrega un nuevo objeto al arreglo del jugador play. El objeto tiene dos propiedades: fec y neto. 
     }
-    playersData[play].push({ fec, neto }); // Esto agrega un nuevo objeto al arreglo del jugador play. El objeto tiene dos propiedades: fec y neto. 
-  }}
 });
 // ordena por score neto de menor a mayor
 //El método slice devuelve una copia de una porción del arreglo.  Toma los seis primeros
@@ -123,7 +123,7 @@ let lineaDatos2 = document.getElementById("lineaScore2");
 // Agrega el nombre del grupo como la primera celda
 for (i = 0; i < 12; i++) {
   const lineaDatos2 = tablaSeis2.insertRow();
-  for (j = 0; j < 19; j++) {
+  for (j = 0; j < 21; j++) {
     if (matriz2[i][j] === 0) {
       matriz2[i][j] = "--";
     }
