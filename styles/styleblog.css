@@ -418,12 +418,12 @@ a {
 }
 
 .submenu {
-  width: 75px;
+  width: 85px;
   text-align: center;
   font-size: 12px;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  margin: 3px;
+  margin: 5px;
   padding: 5px 10px;
   line-height: 30px;
   /*background: rgb(9, 148, 202); */
@@ -436,12 +436,12 @@ a {
 }
 
 .submenuFin {
-  width: 75px;
+  width: 85px;
   text-align: center;
   font-size: 12px;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  margin: 3px;
+  margin: 5px;
   padding: 5px 10px;
   line-height: 30px;
   /*background: #FFA500;*/
@@ -453,12 +453,12 @@ a {
 
 
 .submenuVer {
-  width: 75px;
+  width: 85px;
   text-align: center;
   font-size: 12px;
   color: black;
   text-decoration: none;
-  margin: 3px;
+  margin: 5px;
   padding: 5px 10px;
   line-height: 30px;
   background: #bd6cbd;
