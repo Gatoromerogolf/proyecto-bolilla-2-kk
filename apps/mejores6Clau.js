@@ -18,7 +18,10 @@ players2.forEach(({ play, fec, neto }) => {
         if (!playersData[play]) {
           playersData[play] = []; //Aquí, se está inicializando el arreglo para el jugador play asignándole un nuevo arreglo vacío.
         }
-        playersData[play].push({ fec, neto }); // Esto agrega un nuevo objeto al arreglo del jugador play. El objeto tiene dos propiedades: fec y neto. 
+        if (neto > 0){
+        playersData[play].push({ fec, neto });
+        }
+         // Esto agrega un nuevo objeto al arreglo del jugador play. El objeto tiene dos propiedades: fec y neto. 
     }
 });
 // ordena por score neto de menor a mayor
