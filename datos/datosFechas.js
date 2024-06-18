@@ -17,6 +17,7 @@ const fechas = [
     {fec:16, dia:'Sábado', diaFecha:18, mesFecha:5, textoFecha:"Sábado 18 de mayo"},
     {fec:17, dia:'Sábado', diaFecha:1, mesFecha:6, textoFecha:"Sábado 1 de junio"},
     {fec:18, dia:'Sábado', diaFecha:8, mesFecha:6, textoFecha:"Sábado 8 de junio"},
+    {fec:19, dia:'Sábado', diaFecha:15, mesFecha:6, textoFecha:"Sábado 15 de junio"},
     {fec:90, dia:"Gira", diaFecha:16, mesFecha:3,
     textoFecha:"Sierras 2024"},
     {fec:91, dia:"Gira", diaFecha:16, mesFecha:3,
