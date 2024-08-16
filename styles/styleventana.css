@@ -7,7 +7,7 @@
   width: 70%; /* Anchura completa */
   /*height: 100%; /* Altura completa */
   overflow: auto; /* Habilita el scroll si es necesario */
-  background-color: rgb(236, 56, 56); /* Color de fondo */
+  background-color: rgb(121, 212, 248); /* Color de fondo */
   border: 3px solid black;
   margin: 20px;
   padding: 5px;
@@ -17,7 +17,7 @@
 
 /* Contenido/Estilo del Modal */
 .modal-content {
-  background-color: #eb1d1d;
+  background-color: #1deb27;
   margin: 15% auto; /* 15% desde la parte superior y centrado */
   padding: 200px;
   border: 1px solid #888;
