@@ -4,12 +4,12 @@
   z-index: 1; /* Colócalo sobre otros elementos */
   left: 0;
   top: 20px;
-  width: 60%; /* Anchura completa */
+  width: 30%; /* Anchura completa */
   /*height: 100%; /* Altura completa */
   overflow: auto; /* Habilita el scroll si es necesario */
-  background-color: rgb(216, 214, 214); /* Color de fondo */
+  background-color: rgb(236, 56, 56); /* Color de fondo */
   border: 3px solid black;
-  margin: 30px;
+  margin: 20px;
   padding: 5px;
 
 
@@ -28,7 +28,7 @@ table{
   border-collapse: collapse;
   border: 3px solid black;
   letter-spacing: 0px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@ td,
 th{
     border-collapse: collapse;
     border: 1px dotted rgb(71, 69, 69);
-    padding: 8px 5px;
+    padding: 4px 2px;
     text-align: center;
 }
 
