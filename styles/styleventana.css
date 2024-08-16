@@ -4,7 +4,7 @@
   z-index: 1; /* Colócalo sobre otros elementos */
   left: 0;
   top: 20px;
-  width: 30%; /* Anchura completa */
+  width: 70%; /* Anchura completa */
   /*height: 100%; /* Altura completa */
   overflow: auto; /* Habilita el scroll si es necesario */
   background-color: rgb(236, 56, 56); /* Color de fondo */
